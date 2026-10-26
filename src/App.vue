@@ -1,11 +1,7 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <main class="app-shell">
+    <p class="app-shell__label">Portfolio foundation</p>
+    <h1>Gilang Andhika Buwana</h1>
+    <p class="app-shell__note">The site foundation is ready for the next milestone.</p>
+  </main>
 </template>
-
-<style scoped></style>

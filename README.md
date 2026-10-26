@@ -1,50 +1,36 @@
-# portfolio
+﻿# Gilang Andhika Buwana — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+A personal portfolio project for presenting software engineering, research, and creative technology work. The repository currently contains the application foundation; portfolio sections will be added in later milestones.
 
-## Recommended IDE Setup
+## Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3 and Vue Router
+- Vite
+- JavaScript
+- Lucide icons via `@lucide/vue`
+- Custom CSS design tokens and global styles
 
-## Recommended Browser Setup
+Tailwind CSS is not currently installed.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Prerequisites
 
-## Customize configuration
+- Node.js `^22.18.0 || >=24.12.0`
+- npm
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Setup
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Commands
 
 ```sh
-npm run build
+npm run build       # Production build in dist/
+npm run preview     # Preview the production build locally
+npm run test:unit   # Run unit tests with Vitest
+npm run lint        # Run configured linters
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Static hosting is intended. See [Deployment](docs/DEPLOYMENT.md) for the current Vite approach and remaining GitHub Pages checks.

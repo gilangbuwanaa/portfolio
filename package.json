@@ -14,7 +14,8 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "vue": "rc",
+    "@lucide/vue": "^1.0.0",
+    "vue": "^3.5.44",
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
@@ -38,20 +39,5 @@
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
-  },
-  "overrides": {
-    "vue": "rc",
-    "@vue/compiler-core": "rc",
-    "@vue/compiler-dom": "rc",
-    "@vue/compiler-sfc": "rc",
-    "@vue/compiler-ssr": "rc",
-    "@vue/compiler-vapor": "rc",
-    "@vue/reactivity": "rc",
-    "@vue/runtime-core": "rc",
-    "@vue/runtime-dom": "rc",
-    "@vue/runtime-vapor": "rc",
-    "@vue/server-renderer": "rc",
-    "@vue/shared": "rc",
-    "@vue/compat": "rc"
   }
 }
