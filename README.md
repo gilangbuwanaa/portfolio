@@ -1,6 +1,6 @@
 ﻿# Gilang Andhika Buwana — Portfolio
 
-A personal portfolio project for presenting software engineering, research, and creative technology work. The current interface includes responsive navigation, an introduction, and a Selected Projects section that is awaiting verified project material.
+A personal portfolio project for presenting software engineering, research, and creative technology work. The current interface includes responsive navigation, an introduction, and three selected project records with local screenshots.
 
 ## Stack
 

@@ -10,11 +10,16 @@ describe('App', () => {
     expect(wrapper.get('nav').text()).toContain('Work')
   })
 
-  it('renders the projects section without unsupported project entries', () => {
+  it('renders the selected projects and connects the hero CTA', () => {
     const wrapper = mount(App)
 
     expect(wrapper.get('#work h2').text()).toBe('Selected projects')
-    expect(wrapper.get('#work').text()).toContain('No verified project records')
+    expect(wrapper.findAll('#work article')).toHaveLength(3)
+    expect(wrapper.findAll('#work h3').map((heading) => heading.text())).toEqual([
+      'Elfume',
+      'Helpdesk ULBI',
+      'Diskominfo',
+    ])
     expect(wrapper.get('#home a[href="#work"]').exists()).toBe(true)
     expect(wrapper.text()).not.toContain('Selected work will be introduced in a future milestone.')
   })

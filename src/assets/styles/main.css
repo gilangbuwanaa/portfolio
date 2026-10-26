@@ -14,6 +14,7 @@
   --font-ui: var(--font-body);
   --font-code: var(--font-mono);
   --radius-control-sm: var(--radius-control);
+  --radius-project-frame: var(--radius-surface);
 }
 
 @layer base {
