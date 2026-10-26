@@ -17,7 +17,7 @@ describe('OrganizationsSection', () => {
     expect(wrapper.findAll('img').map((image) => [image.attributes('src'), image.attributes('alt')]))
       .toEqual(organizations.map(({ image, imageAlt }) => [image, imageAlt]))
     expect(organizations.every(({ image }) =>
-      existsSync(resolve(process.cwd(), 'public', image.slice(1))),
+      existsSync(resolve('public', image.slice(1))),
     )).toBe(true)
   })
 })

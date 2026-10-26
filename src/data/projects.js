@@ -1,4 +1,6 @@
-export const projectPlaceholderImage = '/images/projects/image-placeholder.png'
+import { publicAsset } from '../utils/publicAsset'
+
+export const projectPlaceholderImage = publicAsset('/images/projects/image-placeholder.png')
 
 export const projects = [
   {
@@ -10,7 +12,7 @@ export const projects = [
     date: 'Feb 2025',
     platform: 'Android',
     technologies: ['Flutter', 'Kotlin', 'Go Fiber', 'MongoDB'],
-    image: '/images/projects/elfume-porto.png',
+    image: publicAsset('/images/projects/elfume-porto.png'),
     imageAlt: 'Elfume Android perfume shop screens for registration, sign-in, and fragrance browsing.',
   },
   {
@@ -22,7 +24,7 @@ export const projects = [
     date: 'Jun 2024',
     platform: 'Web',
     technologies: ['Node.js', 'MongoDB', 'Go Fiber'],
-    image: '/images/projects/helpdesk-ulbi.png',
+    image: publicAsset('/images/projects/helpdesk-ulbi.png'),
     imageAlt: 'Helpdesk ULBI landing page featuring the university campus and helpdesk service links.',
   },
   {
@@ -34,7 +36,7 @@ export const projects = [
     date: 'Oct 2025',
     platform: 'Web',
     technologies: ['Figma', 'React.js', 'Laravel', 'MySQL'],
-    image: '/images/projects/diskominfo-comprof.png',
+    image: publicAsset('/images/projects/diskominfo-comprof.png'),
     imageAlt: 'Diskominfo Purwakarta company profile homepage with news carousel and agenda calendar.',
   },
 ]

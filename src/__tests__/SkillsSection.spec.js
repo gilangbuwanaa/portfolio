@@ -26,7 +26,7 @@ describe('SkillsSection', () => {
     expect(new Set(visibleNames).size).toBe(31)
     expect(tools.filter(({ icon }) => !icon).map(({ name }) => name)).toEqual(['Flutter'])
     expect(tools.filter(({ icon }) => icon).every(({ icon }) =>
-      existsSync(resolve(process.cwd(), 'public', icon.slice(1))),
+      existsSync(resolve('public', icon.slice(1))),
     )).toBe(true)
     expect(wrapper.findAll('.skills-marquee__set[aria-hidden="true"]')).toHaveLength(2)
   })

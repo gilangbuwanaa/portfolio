@@ -1,4 +1,6 @@
-const skillIcon = (filename) => `/images/tools/${filename}.png`
+import { publicAsset } from '../utils/publicAsset'
+
+const skillIcon = (filename) => publicAsset(`/images/tools/${filename}.png`)
 
 export const toolCategories = [
   {

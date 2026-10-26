@@ -78,4 +78,16 @@ describe('useMusicPlayer', () => {
     player.dispose()
     expect(control.destroy).toHaveBeenCalledTimes(2)
   })
+
+  it('reports provider initialization failures without claiming playback', async () => {
+    const player = useMusicPlayer(songs, async () => {
+      throw new Error('provider unavailable')
+    })
+
+    await player.play({})
+
+    expect(player.status.value).toBe('error')
+    expect(player.isPlaying.value).toBe(false)
+    expect(player.error.value).toContain('Use the link')
+  })
 })
