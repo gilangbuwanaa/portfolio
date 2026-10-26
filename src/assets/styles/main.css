@@ -100,10 +100,6 @@
     radial-gradient(ellipse at 12% 88%, rgb(17 46 89 / 18%), transparent 42%);
 }
 
-.work-anchor {
-  scroll-margin-top: 2rem;
-}
-
 .motion-color {
   transition:
     color var(--duration-fast) var(--ease-standard),

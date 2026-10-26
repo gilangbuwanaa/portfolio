@@ -10,6 +10,15 @@ describe('App', () => {
     expect(wrapper.get('nav').text()).toContain('Work')
   })
 
+  it('renders the projects section without unsupported project entries', () => {
+    const wrapper = mount(App)
+
+    expect(wrapper.get('#work h2').text()).toBe('Selected projects')
+    expect(wrapper.get('#work').text()).toContain('No verified project records')
+    expect(wrapper.get('#home a[href="#work"]').exists()).toBe(true)
+    expect(wrapper.text()).not.toContain('Selected work will be introduced in a future milestone.')
+  })
+
   it('announces the temporary contact behavior', async () => {
     const wrapper = mount(App)
     await wrapper.get('main button').trigger('click')

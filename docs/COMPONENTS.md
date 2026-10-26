@@ -2,14 +2,15 @@
 
 ## Present today
 
-- `src/App.vue` composes the header and hero and provides a minimal work anchor for the hero CTA.
+- `src/App.vue` composes the header, hero, and Selected Projects section.
 - `src/components/layout/AppHeader.vue` renders the wordmark and primary navigation. Its mobile toggle owns its open state; unavailable About and Contact destinations announce that those sections are planned.
-- `src/components/sections/HeroSection.vue` renders the approved introduction and CTA pair. The work CTA targets the placeholder anchor; the contact CTA explains that contact details are not available yet.
+- `src/components/sections/HeroSection.vue` renders the approved introduction and CTA pair. The work CTA targets the Selected Projects section; the contact CTA explains that contact details are not available yet.
+- `src/components/sections/ProjectsSection.vue` introduces the selected work area and presents an explicit no-data state until verified project descriptions and screenshots are available. It renders no empty project cards.
 - `src/main.js` creates the Vue app, installs the existing router, and imports global CSS.
 - `src/router/index.js` retains Vue Router with no routes configured.
 - `src/assets/styles/` holds tokens, global styles, and reduced-motion-aware motion utilities.
 
-These are the first portfolio components. They do not yet accept props or slots because their content and behavior are specific to this milestone.
+The components do not yet accept props or slots because their content and behavior are specific to this milestone. No project data module exists yet; there are no verified project records to separate from the presentation.
 
 ## Planned organization
 
