@@ -1,3 +1,5 @@
+import { experiences } from './experience'
+
 export const profile = {
   introduction:
     'I work across software engineering, product development, and technical research. My background combines applied informatics engineering, full-stack development, and public-sector software work. I am also interested in vision-transformer-based road-weather classification and image-based weather classification research.',
@@ -6,18 +8,7 @@ export const profile = {
     institution: 'Universitas Logistik dan Bisnis Internasional (ULBI)',
     gpa: '3.69 / 4.00',
   },
-  experience: [
-    {
-      role: 'Full-Stack Developer',
-      organization: 'Universitas Logistik dan Bisnis Internasional (ULBI)',
-      period: 'June–September 2024',
-    },
-    {
-      role: 'Developer Intern',
-      organization: 'Dinas Komunikasi dan Informatika Kabupaten Purwakarta',
-      period: 'October 2025–January 2026',
-    },
-  ],
+  experience: [...experiences].reverse(),
   expertise: [
     {
       title: 'Software engineering',

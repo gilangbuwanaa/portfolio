@@ -32,6 +32,7 @@ describe('App', () => {
       'work',
       'about',
       'skills',
+      'experience',
     ])
     expect(wrapper.findAll('#about')).toHaveLength(1)
     expect(wrapper.get('nav a[href="#about"]').exists()).toBe(true)
