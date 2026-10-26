@@ -64,7 +64,7 @@ describe('ProjectsSection', () => {
       expect(project.imageAlt).toBeTruthy()
     }
 
-    expect(projects[1].technologies).toBeUndefined()
+    expect(projects[1].technologies).toEqual(['Node.js', 'MongoDB', 'Go Fiber'])
     expect(projects[0].technologies).toEqual(['Flutter', 'Kotlin', 'Go Fiber', 'MongoDB'])
     expect(projects[2].technologies).toEqual(['Figma', 'React.js', 'Laravel', 'MySQL'])
   })
@@ -96,7 +96,7 @@ describe('ProjectsSection', () => {
     expect(wrapper.findAll('img').map((image) => image.attributes('alt'))).toEqual(projects.map(({ imageAlt }) => imageAlt))
     expect(wrapper.findAll('a')).toHaveLength(0)
     expect(wrapper.text()).not.toMatch(/Idbiz|Bukuin|GoDeez/)
-    expect(wrapper.findAll('article')[1].find('ul[aria-label="Technologies"]').exists()).toBe(false)
+    expect(wrapper.findAll('article')[1].find('ul[aria-label="Technologies"]').text()).toContain('Node.js')
   })
 
   it('starts with Elfume active and exposes the active project accessibly', () => {
@@ -160,6 +160,18 @@ describe('ProjectsSection', () => {
     for (const card of wrapper.findAll('article')) {
       expect(card.element).toBe(originalElements.get(card.get('h3').text()))
     }
+  })
+
+  it('allows the full project description to be disclosed and collapsed', async () => {
+    const wrapper = mount(ProjectsSection)
+    const disclosure = wrapper.get('details')
+
+    expect(disclosure.element.open).toBe(false)
+    await disclosure.get('summary').trigger('click')
+    expect(disclosure.element.open).toBe(true)
+    expect(disclosure.get('p').text()).toBe(projects[0].description)
+    await disclosure.get('summary').trigger('click')
+    expect(disclosure.element.open).toBe(false)
   })
 
   it('activates a side card when its select button is clicked', async () => {

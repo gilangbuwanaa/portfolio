@@ -2,11 +2,15 @@
 
 ## Present today
 
-- `src/App.vue` composes the header, hero, and Selected Projects section.
-- `src/components/layout/AppHeader.vue` renders the wordmark and primary navigation. Its mobile toggle owns its open state; unavailable About and Contact destinations announce that those sections are planned.
+- `src/App.vue` composes the header, hero, Selected Projects, About & Expertise, and Technical Skills sections in that order.
+- `src/components/layout/AppHeader.vue` renders the wordmark and primary navigation. Its mobile toggle owns its open state; About navigates to the implemented section, while the unavailable Contact destination announces that the section is planned.
 - `src/components/sections/HeroSection.vue` renders the approved introduction and CTA pair. The work CTA targets the Selected Projects section; the contact CTA explains that contact details are not available yet.
 - `src/components/sections/ProjectsSection.vue` renders up to three project entries as a fixed-size depth carousel and shows an explicit empty state when the list is empty. The first project is active initially; circular previous/next buttons and side-card buttons change the active record while keyed cards retain their identity. Cards expose the active state, and motion respects reduced-motion preferences. Entries without an image use the shared public placeholder; optional external links are rendered only for HTTP(S) URLs.
+- `src/components/sections/AboutSection.vue` presents the approved profile introduction, education, concise experience history, and expertise areas with semantic section headings.
+- `src/components/sections/SkillsSection.vue` presents evidence-based technical skills grouped by discipline without ratings or proficiency claims.
 - `src/data/projects.js` is the content source for the three selected project records and centralizes the fallback placeholder path.
+- `src/data/profile.js` is the source for approved profile, education, experience, and expertise content used by About & Expertise.
+- `src/data/skills.js` is the centralized source for the technology and research-area labels shown in Technical Skills.
 - `src/main.js` creates the Vue app, installs the existing router, and imports global CSS.
 - `src/router/index.js` retains Vue Router with no routes configured.
 - `src/assets/styles/` holds tokens, global styles, and reduced-motion-aware motion utilities.

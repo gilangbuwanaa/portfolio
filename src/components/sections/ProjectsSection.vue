@@ -152,6 +152,10 @@ function moveActiveProject(direction) {
                 <p class="project-carousel__description mt-3 text-sm leading-6 text-muted">
                   {{ project.description }}
                 </p>
+                <details class="project-carousel__full-description mt-2">
+                  <summary>Read full description</summary>
+                  <p class="mt-2 text-sm leading-6 text-muted">{{ project.description }}</p>
+                </details>
               </template>
 
               <div class="project-carousel__technology-slot mt-auto pt-4">

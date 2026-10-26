@@ -53,7 +53,7 @@ function announcePlannedSection(section) {
         <a
           href="#about"
           class="motion-color rounded-control-sm px-3 py-2 hover:text-ink"
-          @click.prevent="announcePlannedSection('About')"
+          @click="closeMenu"
         >
           About
         </a>

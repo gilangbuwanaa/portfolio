@@ -24,6 +24,19 @@ describe('App', () => {
     expect(wrapper.text()).not.toContain('Selected work will be introduced in a future milestone.')
   })
 
+  it('places About after the projects and gives the navigation a working destination', () => {
+    const wrapper = mount(App)
+
+    expect(wrapper.findAll('main > section').map((section) => section.attributes('id'))).toEqual([
+      'home',
+      'work',
+      'about',
+      'skills',
+    ])
+    expect(wrapper.findAll('#about')).toHaveLength(1)
+    expect(wrapper.get('nav a[href="#about"]').exists()).toBe(true)
+  })
+
   it('announces the temporary contact behavior', async () => {
     const wrapper = mount(App)
     await wrapper.get('main button').trigger('click')
