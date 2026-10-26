@@ -6,11 +6,12 @@ A personal portfolio project for presenting software engineering, research, and 
 
 - Vue 3 and Vue Router
 - Vite
+- Tailwind CSS v4 via the official Vite plugin
 - JavaScript
 - Lucide icons via `@lucide/vue`
 - Custom CSS design tokens and global styles
 
-Tailwind CSS is not currently installed.
+Tailwind utilities are used alongside the CSS custom properties in `src/assets/styles/tokens.css`.
 
 ## Prerequisites
 

@@ -1,10 +1,10 @@
 ﻿# Design system
 
-The foundation follows the project's hybrid premium direction: restrained color, clear type hierarchy, generous spacing, and motion that does not compete with content. The initial shell is intentionally minimal.
+The foundation follows the project's hybrid premium direction: restrained color, clear type hierarchy, generous spacing, and motion that does not compete with content. The current interface is limited to navigation, the hero, and a small work destination marker; later portfolio sections are not implemented.
 
 ## Color tokens
 
-Tokens live in `src/assets/styles/tokens.css`.
+Tokens live in `src/assets/styles/tokens.css`. Tailwind CSS v4 is integrated through `@tailwindcss/vite`; `main.css` imports Tailwind, tokens, and motion styles, and maps semantic token aliases into Tailwind's theme so utilities can use names such as `bg-page`, `text-muted`, and `border-hairline`.
 
 | Token | Value | Use |
 | --- | --- | --- |
@@ -22,7 +22,9 @@ The CSS provides fallbacks for Space Grotesk headings, Inter body text, and JetB
 
 ## Global styles and motion
 
-`main.css` imports the tokens and motion styles, sets global box sizing, page defaults, link behavior, and focus visibility. Horizontal overflow is clipped at the page level to avoid accidental sideways scrolling; components still need to be laid out correctly. Motion is limited to an optional color transition utility. Reduced motion disables smooth scrolling and shortens animations and transitions.
+`main.css` imports Tailwind, the tokens, and motion styles, then sets global box sizing, page defaults, link behavior, and focus visibility in Tailwind's base layer. Horizontal overflow is clipped at the page level to avoid accidental sideways scrolling; components still need to be laid out correctly. Motion is limited to optional color and transform transitions. Reduced motion shortens animations and transitions.
+
+Use Tailwind for component layout, spacing, responsive sizing, and common type and color styles. Keep foundational values in tokens and reserve custom CSS for the ambient hero background, navigation behavior, and other specialized patterns. Do not duplicate a token value in component classes when a semantic utility is available.
 
 ## Icons
 

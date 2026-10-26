@@ -1,7 +1,17 @@
+<script setup>
+import AppHeader from './components/layout/AppHeader.vue'
+import HeroSection from './components/sections/HeroSection.vue'
+</script>
+
 <template>
-  <main class="app-shell">
-    <p class="app-shell__label">Portfolio foundation</p>
-    <h1>Gilang Andhika Buwana</h1>
-    <p class="app-shell__note">The site foundation is ready for the next milestone.</p>
+  <AppHeader />
+  <main>
+    <HeroSection />
+    <div
+      id="work"
+      class="work-anchor mx-auto max-w-[var(--layout-content-width)] px-[var(--layout-gutter)] pb-16 text-sm text-muted"
+    >
+      Selected work will be introduced in a future milestone.
+    </div>
   </main>
 </template>

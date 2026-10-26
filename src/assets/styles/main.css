@@ -1,84 +1,113 @@
+@import 'tailwindcss';
 @import './tokens.css';
 @import './animations.css';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@theme inline {
+  --color-page: var(--color-background);
+  --color-surface: var(--color-background-elevated);
+  --color-brand: var(--color-accent);
+  --color-ink: var(--color-text-primary);
+  --color-muted: var(--color-text-secondary);
+  --color-hairline: var(--color-border);
+  --color-focus-ring: var(--color-focus);
+  --font-editorial: var(--font-display);
+  --font-ui: var(--font-body);
+  --font-code: var(--font-mono);
+  --radius-control-sm: var(--radius-control);
 }
 
-html {
-  min-width: 320px;
-  background: var(--color-background);
-  scroll-behavior: smooth;
-  text-size-adjust: 100%;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  overflow-x: clip;
-  background: var(--color-background);
-  color: var(--color-text-primary);
-  font-family: var(--font-body);
-  font-synthesis: none;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
+  html {
+    min-width: 320px;
+    background: var(--color-background);
+    text-size-adjust: 100%;
+  }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: clip;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-synthesis: none;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
 
-a {
-  color: inherit;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.18em;
-}
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
 
-:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 3px;
+  a {
+    color: inherit;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
 }
 
 #app {
   min-height: 100vh;
 }
 
-.app-shell {
-  display: grid;
-  min-height: 100vh;
-  align-content: center;
-  justify-items: start;
-  width: min(100%, var(--layout-content-width));
-  margin-inline: auto;
-  padding: var(--space-section) var(--layout-gutter);
+.site-header__inner {
+  position: relative;
 }
 
-.app-shell h1 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(2.25rem, 8vw, 5rem);
-  line-height: 1.08;
-  letter-spacing: -0.045em;
+.site-header__nav {
+  display: none;
 }
 
-.app-shell__label {
-  margin: 0 0 1rem;
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.site-header__nav--open {
+  display: flex;
 }
 
-.app-shell__note {
-  max-width: 36rem;
-  margin: 1.25rem 0 0;
-  color: var(--color-text-secondary);
+@media (max-width: 47.999rem) {
+  .site-header__nav {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 48rem) {
+  .site-header__nav {
+    display: flex;
+  }
+}
+
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse at 72% 40%, rgb(17 46 89 / 36%), transparent 47%),
+    radial-gradient(ellipse at 12% 88%, rgb(17 46 89 / 18%), transparent 42%);
+}
+
+.work-anchor {
+  scroll-margin-top: 2rem;
+}
+
+.motion-color {
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
 }

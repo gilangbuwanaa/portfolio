@@ -4,8 +4,28 @@ import { mount } from '@vue/test-utils'
 import App from '../App.vue'
 
 describe('App', () => {
-  it('mounts renders properly', () => {
+  it('renders the hero and navigation', () => {
     const wrapper = mount(App)
-    expect(wrapper.text()).toContain('Gilang Andhika Buwana')
+    expect(wrapper.get('h1').text()).toContain('Engineering ideas.')
+    expect(wrapper.get('nav').text()).toContain('Work')
+  })
+
+  it('announces the temporary contact behavior', async () => {
+    const wrapper = mount(App)
+    await wrapper.get('main button').trigger('click')
+
+    expect(wrapper.text()).toContain('Contact details will be added in a future milestone.')
+  })
+
+  it('opens the mobile menu and closes it after selecting a destination', async () => {
+    const wrapper = mount(App)
+    const menuToggle = wrapper.get('[aria-controls="primary-navigation"]')
+
+    expect(menuToggle.attributes('aria-expanded')).toBe('false')
+    await menuToggle.trigger('click')
+    expect(menuToggle.attributes('aria-expanded')).toBe('true')
+
+    await wrapper.get('a[href="#work"]').trigger('click')
+    expect(menuToggle.attributes('aria-expanded')).toBe('false')
   })
 })
