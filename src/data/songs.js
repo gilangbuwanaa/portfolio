@@ -1,0 +1,17 @@
+export const songs = [
+  { id: 'tell-me', title: 'Tell Me', artists: ['Grizz Music', 'CapsCtrl'], platform: 'YouTube', url: 'https://youtu.be/FrHsok1FdGc' },
+  { id: 'mindless', title: 'Mindless', artists: ['Grizz Music'], platform: 'YouTube', url: 'https://youtu.be/W-7KAyXjpjc' },
+  { id: 'fake-frnds', title: 'Fake Frnds', artists: ['Aisah Jihan', 'Grizz Music'], platform: 'YouTube', url: 'https://youtu.be/LC3TDAFwfkE' },
+  { id: 'bangkit-kawan-grizz-remix', title: 'Bangkit Kawan (Grizz Remix)', artists: ['Ozi', 'Atuluxx', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/1Oaalx5qRFeK2vUrwGjWWJ' },
+  { id: 'datang-sesuka-hati', title: 'Datang Sesuka Hati', artists: ['Atuluxx', 'Grizz Music', 'Dijafu'], platform: 'Spotify', url: 'https://open.spotify.com/track/45Nh1LwSpviSZ5hDWPFNUo' },
+  { id: 'haha-boss', title: 'Haha Boss', artists: ['Atuluxx', 'Grizz Music'], platform: 'YouTube', url: 'https://youtu.be/ZTGaDAjLydY' },
+  { id: 'berjanji', title: 'BERJANJI', artists: ['Atuluxx', 'Grizz Music'], platform: 'YouTube', url: 'https://youtu.be/s_QGFHjbpXU' },
+  { id: 'sick-boy', title: 'SICK BOY', artists: ['Atuluxx', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/0h3HfPOl6iBmJveXvK9qc7' },
+  { id: 'nona-baik', title: 'Nona baik', artists: ['Atuluxx', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/7bqBbJADu3yKuAgzLmwn1k' },
+  { id: 'sesaat', title: 'SESAAT', artists: ['Atuluxx', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/2quX0211pj345i9kkGbqPy' },
+  { id: 'sesaat-rmx', title: 'SESAAT RMX', artists: ['Atuluxx', 'Grizz Music', 'Hyperion'], platform: 'Spotify', url: 'https://open.spotify.com/track/53Ph4FmxsQQuEgSKWKxVAJ' },
+  { id: 'tergila-gila', title: 'TERGILA GILA', artists: ['Chaerys', 'Atuluxx', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/6gsL1YkHdXrgUldlnjuLOc' },
+  { id: 'bisakah-kita', title: 'BISAKAH KITA?', artists: ['Atuluxx', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/3Twu8dVSnNsocAsqzCIkbF' },
+  { id: 'terombang-ambing', title: 'Terombang Ambing', artists: ['Atuluxx', 'Grizz Music'], platform: 'YouTube', url: 'https://youtu.be/qpd4TxQQb1Q' },
+  { id: 'realita', title: 'Realita', artists: ['Fahra Fidriana', 'Atuluxx', 'SULTAN', 'Grizz Music'], platform: 'Spotify', url: 'https://open.spotify.com/track/1EHwDyYD4PdJDEEQwt3lx0' },
+]

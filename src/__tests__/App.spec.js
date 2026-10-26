@@ -33,9 +33,24 @@ describe('App', () => {
       'about',
       'skills',
       'experience',
+      'organizations',
+      'research',
+      'songs',
     ])
     expect(wrapper.findAll('#about')).toHaveLength(1)
     expect(wrapper.get('nav a[href="#about"]').exists()).toBe(true)
+  })
+
+  it('keeps each section ID unique and resolves implemented navigation anchors', () => {
+    const wrapper = mount(App)
+    const ids = wrapper.findAll('main > section').map((section) => section.attributes('id'))
+    const implementedDestinations = wrapper.findAll('nav a[href^="#"]')
+      .map((link) => link.attributes('href').slice(1))
+      .filter((id) => id !== 'contact')
+
+    expect(new Set(ids).size).toBe(ids.length)
+    expect(implementedDestinations).toEqual(['home', 'work', 'about'])
+    expect(implementedDestinations.every((id) => wrapper.find(`#${id}`).exists())).toBe(true)
   })
 
   it('announces the temporary contact behavior', async () => {
