@@ -23,10 +23,10 @@ function showContactNotice() {
 
       <h1
         id="hero-title"
-        class="max-w-6xl font-editorial text-[clamp(3rem,8.5vw,7.5rem)] font-medium leading-[0.98] tracking-[-0.065em] text-ink"
+        class="max-w-6xl font-editorial text-[clamp(2rem,8.5vw,7.5rem)] font-medium leading-[0.98] tracking-[-0.065em] text-ink sm:text-[clamp(3rem,8.5vw,7.5rem)]"
       >
-        Engineering ideas.<br class="hidden sm:block" />
-        <span class="text-white/65">Designing experiences.</span>
+        <span class="block whitespace-nowrap">Engineering ideas.</span>
+        <span class="block whitespace-nowrap text-white/65">Designing experiences.</span>
       </h1>
 
       <p class="mt-7 max-w-xl text-base leading-7 text-muted sm:mt-9 sm:text-lg sm:leading-8">
